@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Importmap Inspector",
+  "description": "Inspect the importmap on the page",
+  "version": "1.0",
+  "action": {
+    "default_popup": "inspector.html",
+    "default_icon": "magnifying-glass.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["get-importmap.js"]
+    }
+  ]
+}
